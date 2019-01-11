@@ -14,6 +14,13 @@ module.exports = function (grunt) {
             }
         },
         browserify: {
+            enLang: {
+                src: [],
+                options: {
+                    require: ['./src/lang/en:./lang/en']
+                },
+                dest: 'dist/lang/en.js'
+            },
             dist: {
                 files: {
                     'dist/validator.js': 'src/validator.js'
